@@ -11,4 +11,4 @@ This app is a Rails API and a React frontend. Eventually, there will be a React 
 
 ## Hitting the API
 
-<a href="https://www.getpostman.com/" target="_blank">Postman</a>
+I use <a href="https://www.getpostman.com/" target="_blank">Postman</a> to test my API endpoints.
