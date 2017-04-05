@@ -1,24 +1,18 @@
-# README
+# Book App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This app is a Rails API and a React frontend. Eventually, there will be a React Native app that uses the rails api.
 
 * Ruby version
+	* 2.3.3
 
 * System dependencies
 
 * Configuration
 
 * Database creation
+	* PostgreSQL (9.4.11)
+	* Run `rake db:migrate`
 
-* Database initialization
+## Hitting the API
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I use [Postman](https://www.getpostman.com/)
