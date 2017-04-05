@@ -11,5 +11,19 @@ This app is a Rails API and a React frontend. Eventually, there will be a React 
 
 ## Hitting the API
 
-I use <a href="https://www.getpostman.com/" target="_blank">Postman</a> to test my API endpoints.
-[Postman](https://www.getpostman.com/){:target="_blank"}
+I use [Postman](https://www.getpostman.com/) to test my API endpoints.
+
+* Running `rails routes` on this project returns:
+	* ```      Prefix Verb   URI Pattern                           Controller#Action
+book_authors GET    /books/:book_id/authors(.:format)     authors#index
+             POST   /books/:book_id/authors(.:format)     authors#create
+ book_author GET    /books/:book_id/authors/:id(.:format) authors#show
+             PATCH  /books/:book_id/authors/:id(.:format) authors#update
+             PUT    /books/:book_id/authors/:id(.:format) authors#update
+             DELETE /books/:book_id/authors/:id(.:format) authors#destroy
+       books GET    /books(.:format)                      books#index
+             POST   /books(.:format)                      books#create
+        book GET    /books/:id(.:format)                  books#show
+             PATCH  /books/:id(.:format)                  books#update
+             PUT    /books/:id(.:format)                  books#update
+             DELETE /books/:id(.:format)                  books#destroy```
