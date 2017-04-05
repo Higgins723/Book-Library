@@ -15,7 +15,7 @@ I use [Postman](https://www.getpostman.com/) to test my API endpoints.
 
 * Running `rails routes` on this project returns:
 ```      
-	    Prefix Verb   URI Pattern                           Controller#Action
+      Prefix Verb   URI Pattern                           Controller#Action
 book_authors GET    /books/:book_id/authors(.:format)     authors#index
              POST   /books/:book_id/authors(.:format)     authors#create
  book_author GET    /books/:book_id/authors/:id(.:format) authors#show
