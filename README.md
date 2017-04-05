@@ -14,7 +14,8 @@ This app is a Rails API and a React frontend. Eventually, there will be a React 
 I use [Postman](https://www.getpostman.com/) to test my API endpoints.
 
 * Running `rails routes` on this project returns:
-	```      Prefix Verb   URI Pattern                           Controller#Action
+```      
+	    Prefix Verb   URI Pattern                           Controller#Action
 book_authors GET    /books/:book_id/authors(.:format)     authors#index
              POST   /books/:book_id/authors(.:format)     authors#create
  book_author GET    /books/:book_id/authors/:id(.:format) authors#show
@@ -26,4 +27,5 @@ book_authors GET    /books/:book_id/authors(.:format)     authors#index
         book GET    /books/:id(.:format)                  books#show
              PATCH  /books/:id(.:format)                  books#update
              PUT    /books/:id(.:format)                  books#update
-             DELETE /books/:id(.:format)                  books#destroy```
+             DELETE /books/:id(.:format)                  books#destroy
+```
