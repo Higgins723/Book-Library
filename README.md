@@ -115,3 +115,5 @@ book_authors GET    /books/:book_id/authors(.:format)     authors#index
 
 * To create the React app I use [create-react-app](https://github.com/facebookincubator/create-react-app)
 * I also use `Foreman` to handle the processes of Rails and React
+* Because we are using rake instead of running `npm start` for React and `bin/rails s` for Rails we can just run:
+  * `rake start` this will kick off both services
