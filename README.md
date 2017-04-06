@@ -72,3 +72,41 @@ book_authors GET    /books/:book_id/authors(.:format)     authors#index
               "updated_at": "2017-04-06T00:21:20.558Z"
             }
             ```
+      * Now let's add an author change to POST and change the url to `localhost:3000/books/5/authors`
+      * ```
+        {
+          "name": "J.K. Rowling"
+        }
+        ```
+        * This will return the author, don't forget to change to GET and keep the same url
+        * There can be multiple authors for a book which is why we see the author in an array []
+          * ```
+            [
+              {
+                "id": 10,
+                "name": "J.K. Rowling",
+                "book_id": 5,
+                "created_at": "2017-04-06T00:32:25.156Z",
+                "updated_at": "2017-04-06T00:32:25.156Z"
+              }
+            ]
+            ```
+        * If we change the url to `localhost:3000/books/5/authors/10` we will just see
+          * ```
+            {
+              "id": 10,
+              "name": "J.K. Rowling",
+              "book_id": 5,
+              "created_at": "2017-04-06T00:32:25.156Z",
+              "updated_at": "2017-04-06T00:32:25.156Z"
+            }
+            ```
+      * The last thing to check is to delete a book and an author
+        * Change to DELETE and the url to `localhost:3000/books/5`
+          * If you GET for that url you will get
+            * ```
+              {
+                "message": "Couldn't find Book with 'id'=5"
+              }
+              ```
+        * That author will also be gone too
