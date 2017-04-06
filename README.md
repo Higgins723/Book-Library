@@ -112,3 +112,6 @@ book_authors GET    /books/:book_id/authors(.:format)     authors#index
         * That author will also be gone too
 
 ## Adding React to the project
+
+* To create the React app I use [create-react-app](https://github.com/facebookincubator/create-react-app)
+* I also use `Foreman` to handle the processes of Rails and React
