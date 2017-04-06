@@ -43,3 +43,13 @@ book_authors GET    /books/:book_id/authors(.:format)     authors#index
 				"description": "Harry Potter is a series of fantasy novels"
 			}
 			```
+			* This will add the book Harry Potter to the database.
+			* ```
+				{
+				  "id": 5,
+				  "title": "Harry Potter",
+				  "description": "Harry Potter is a series of fantasy novels",
+				  "created_at": "2017-04-05T23:59:44.162Z",
+				  "updated_at": "2017-04-05T23:59:44.162Z"
+				}
+				```
