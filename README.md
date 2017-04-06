@@ -110,3 +110,5 @@ book_authors GET    /books/:book_id/authors(.:format)     authors#index
               }
               ```
         * That author will also be gone too
+
+## Adding React to the project
