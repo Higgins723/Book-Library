@@ -3,13 +3,13 @@
 This app is a Rails API and a React frontend. Eventually, there will be a React Native app that uses the rails api.
 
 * Ruby version
-	* 2.3.3
+  * 2.3.3
 
 * Database creation
-	* PostgreSQL (9.4.11)
-	* Run `psql` in the terminal
-		* Inside of psql run `CREATE DATABASE timeclockapi_development;`
-	* Run `rake db:migrate`
+  * PostgreSQL (9.4.11)
+  * Run `psql` in the terminal
+    * Inside of psql run `CREATE DATABASE timeclockapi_development;`
+  * Run `rake db:migrate`
 
 ## Hitting the API
 
@@ -32,24 +32,43 @@ book_authors GET    /books/:book_id/authors(.:format)     authors#index
              DELETE /books/:id(.:format)                  books#destroy
 ```
 * Let's test those routes (* Make sure Postman and Rails are running):
-	* Postman is an app so just find the location and run it
-	* To kickoff Rails run `bin/rails s` ("s" is short for server)
-	* First we have to create a book or there will be nothing to see
-		* Select POST and in the URL paste `localhost:3000/books/`
-		* From the Body tab click raw and make sure the drop down option `JSON (application/json)` is selected
-		* ```
-			{
-				"title": "Harry Potter",
-				"description": "Harry Potter is a series of fantasy novels"
-			}
-			```
-			* This will add the book Harry Potter to the database.
-			* ```
-				{
-				  "id": 5,
-				  "title": "Harry Potter",
-				  "description": "Harry Potter is a series of fantasy novels",
-				  "created_at": "2017-04-05T23:59:44.162Z",
-				  "updated_at": "2017-04-05T23:59:44.162Z"
-				}
-				```
+  * Postman is an app so just find the location and run it
+  * To kickoff Rails run `bin/rails s` ("s" is short for server)
+  * First we have to create a book or there will be nothing to see
+    * Select POST and in the URL paste `localhost:3000/books/`
+    * From the Body tab click raw and make sure the drop down option `JSON (application/json)` is selected
+    * ```
+      {
+        "title": "Harry Potter",
+        "description": "Harry Potter is a series of fantasy novels"
+      }
+      ```
+      * This will add the book Harry Potter to the database.
+      * ```
+        {
+          "id": 5,
+          "title": "Harry Potter",
+          "description": "Harry Potter is a series of fantasy novels",
+          "created_at": "2017-04-05T23:59:44.162Z",
+          "updated_at": "2017-04-05T23:59:44.162Z"
+        }
+        ```
+      * Oops we forgot to add additional information to the Harry Potter title
+        * Now, change to PUT and change the url to `localhost:3000/books/5`
+        * Notice that 5 is the same id as when we created the book
+        * In the body we only need to change the title so it should look like this
+        * ```
+          {
+            "title": "Harry Potter and the Sorcerer's Stone"
+          }
+          ```
+          * This will now have the correct title, you can check it by using GET and using the same url `localhost:3000/books/5`
+          * ```
+            {
+              "id": 5,
+              "title": "Harry Potter and the Sorcerer's Stone",
+              "description": "Harry Potter is a series of fantasy novels",
+              "created_at": "2017-04-05T23:59:44.162Z",
+              "updated_at": "2017-04-06T00:21:20.558Z"
+            }
+            ```
